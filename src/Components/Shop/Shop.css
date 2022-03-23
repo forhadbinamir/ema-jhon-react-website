@@ -1,0 +1,21 @@
+.container{
+    width: 95%;
+    margin: auto;
+}
+.shop-area{
+    margin-top:20px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.shop-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    
+}
+.shop-summery{
+    background-color: #FFE0B3;
+    border-radius: 8px;
+    padding: 20px;
+}
