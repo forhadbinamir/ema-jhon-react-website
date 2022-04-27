@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../Firebase.init';
 
 const Shipping = () => {

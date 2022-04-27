@@ -8,20 +8,20 @@ import ReviewItems from '../ReviewItems/ReviewItems';
 
 const Orders = () => {
     const [products, setProducts] = useProducts();
-    const [cart, setCart] = useCart(products);
+    const [cart, setCart] = useCart();
 
     const removeSingleProduct = products => {
-        const rest = cart.filter(pd => pd.id !== products.id);
+        const rest = cart.filter(pd => pd._id !== products._id);
         console.log(rest)
         setCart(rest);
-        removeFromDb(products.id)
+        removeFromDb(products._id)
     }
     return (
         <div className='shop-area'>
             <div className="review-shop-container">
                 {
                     cart.map(product => <ReviewItems
-                        key={product.id}
+                        key={product._id}
                         cart={product}
                         removeSingleProduct={removeSingleProduct}
                     >
